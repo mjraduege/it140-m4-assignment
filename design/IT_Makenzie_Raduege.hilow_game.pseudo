@@ -1,0 +1,38 @@
+START hilow_game
+import random
+  
+def basic_high_low_game() :
+print ("===Welcome to the high/low game===")
+# Difficulty selection
+difficulty = imput("Choose difficulty (easy/medium/hard) :").lower()
+
+if difficulty == "easy":
+lower_bound,  upper_bound = 1, 10
+elif difficulty == "medium":
+lower_bound,  upper_bound = 1, 40
+else: #Default to hard if input is invalid
+elif difficulty == "hard":
+lower_bound,  upper_bound = 1, 125
+
+#1. Generate random number based on bounds 
+random_number = random.randint(lower_bound, upper_bound)
+#2. Initialize guess counter
+number_ofguesses = 0
+print (f"I'm thinking of a number between {lower_bound) and (upper_bound)")
+
+while True:
+try:
+guess= int(input("Enter Guess"))
+
+if guess < lower_bound or guess > upper_bound:
+print (please enter number between
+{lower_bound} and {upper_bound}")
+continue
+number_of_guess+=1
+#3. Check Guess and provide hints
+if guess <random_number:
+print (f'Well Done! You found the right number in {number_of_guesses} attempts")
+break #4. End Loop when number is right 
+END hilow_game
+
+
